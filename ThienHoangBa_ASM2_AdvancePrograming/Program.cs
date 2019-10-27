@@ -11,31 +11,31 @@ namespace thienApp_AD_ASM_2
             while (n == 1)
             {
                 Console.WriteLine("Vui long chon action you want to do" +
-                    "\n1: tinh chu vi va dien tich hinh vuong" +
-                    "\n2: tinh chu vi va dien tich hinh chu nhat" +
-                    "\n3: ket thuc chuong trinh");
+                    "\n1: Calculate the circumference and area square" +
+                    "\n2: Calculate the circumference and area rectangle" +
+                    "\n3: End program");
                 n = Convert.ToInt32(Console.ReadLine());
                 switch (n)
                 {
                     case 1:
-                        Console.Write("vui long nhap vao chieu dai canh cua hinh vuong ");
+                        Console.Write("Please enter one side length square ");
                         int a = Convert.ToInt32(Console.ReadLine());
-                        hinhvuong hv = new hinhvuong(a, a);
-                        Console.WriteLine("dien tich hinh vuong la: " + hv.tinhdientich() + "\nchu vi hinh vuong la: " + hv.tinhchuvi());
+                        hinhvuong hv = new hinhvuong(a);
+                        Console.WriteLine("Area square la: " + hv.tinhdientich(a) + "\nchu vi square la: " + hv.tinhchuvi(a));
                         n = 1;
                         break;
                     case 2:
-                        Console.WriteLine("vui long nhap vao chieu height va weight cua hinh chu nhat ");
-                        Console.Write("height la: ");
+                        Console.WriteLine("Please enter chieu height va width cua rectangle ");
+                        Console.Write("length is: ");
                         int b = Convert.ToInt32(Console.ReadLine());
-                        Console.Write("weight la: ");
+                        Console.Write("width is: ");
                         int c = Convert.ToInt32(Console.ReadLine());
                         hinhchunhat hcn = new hinhchunhat(b, c);
-                        Console.WriteLine("dien tich hinh chu nhat la: " + hcn.tinhdientich() + "\nchu vi hinh chu nhat la: " + hcn.tinhchuvi());
+                       Console.WriteLine("Area rectangle la: " + hcn.tinhdientich(b,c) + "\nchu vi rectangle la: " + hcn.tinhchuvi(b,c));
                         n = 1;
                         break;
                     default:
-                        Console.WriteLine("cam on ban da su dung chuong trinh, hen gap lai ban trong thoi gian som nhat");
+                        Console.WriteLine("thank you for use program, see u again");
                         n = 2;
                         break;
                 }

@@ -6,20 +6,18 @@ namespace thienApp_AD_ASM_2
 {
     class hinhtugiaccan
     {
-        private int height;
-        private int weight;
-        public hinhtugiaccan(int height, int weight)
+        private int length;
+        private int width;
+        public hinhtugiaccan(int length, int width)
         {
-            this.height = height;
-            this.weight = weight;
+            this.length = length;
+            this.width = width;
+            
         }
-        public int tinhdientich()
+        public hinhtugiaccan(int length)
         {
-            return height * weight;
+            this.length = length;
         }
-        public int tinhchuvi()
-        {
-            return (height + weight) * 2;
-        }
+
     }
 }
